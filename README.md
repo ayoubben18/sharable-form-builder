@@ -2,7 +2,7 @@
 
 A sharable form builder built with Next.js, Shadcn/UI.
 
-Preview the project [here](https://sharable-form-builder-ayoubben18.vercel.app/)
+Preview the project [here](https://sharable-form-builder.vercel.app/)
 Visit the repository [here](https://github.com/ayoubben18/sharable-form-builder)
 Visit My github [here](https://github.com/ayoubben18)
 
