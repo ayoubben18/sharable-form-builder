@@ -43,7 +43,7 @@ import PhoneInput from "./ui/phone-input";
 
 const FormPreview = () => {
   const router = useRouter();
-  const { form: formStore, setForm } = useFormStore();
+  const { form: formStore, setForm, setResponse } = useFormStore();
 
   const [resume, setResume] = useState<{
     uploaded: boolean;
@@ -80,6 +80,8 @@ const FormPreview = () => {
       return;
     }
     toast.success("Form submitted successfully !!");
+    setResponse(data);
+    router.push("/response");
   };
 
   return (

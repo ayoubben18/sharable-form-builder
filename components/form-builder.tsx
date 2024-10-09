@@ -105,18 +105,7 @@ function FormBuilder() {
   const { form: formStore, setForm } = useFormStore();
   const form = useForm<FormType>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      fields: [
-        {
-          id: "_1",
-          name: "Full name",
-          type: "text",
-          description: "Enter your full name here",
-          required: true,
-          format: "string",
-        },
-      ],
-    },
+    defaultValues: formStore,
   });
   const [expandedField, setExpandedField] = useState<number | null>(0);
 

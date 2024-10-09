@@ -4,6 +4,8 @@ import { createJSONStorage, persist } from "zustand/middleware";
 interface FormStore {
   form: FormType;
   setForm: (form: FormType) => void;
+  response: any;
+  setResponse: (response: any) => void;
 }
 
 export const useFormStore = create<FormStore>()(
@@ -25,6 +27,8 @@ export const useFormStore = create<FormStore>()(
         includeFileUpload: false,
       },
       setForm: (form) => set({ form }),
+      response: null,
+      setResponse: (response) => set({ response }),
     }),
     {
       name: "form-store",
