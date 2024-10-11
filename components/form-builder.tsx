@@ -66,10 +66,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import { formSchema, FormType } from "@/types/form-types";
-import FileUploadCard from "./file-upload-card";
 import { useFormStore } from "@/stores/useFormStore";
+import { formSchema, FormType } from "@/types/form-types";
 import { useRouter } from "next/navigation";
+import FileUploadCard from "./file-upload-card";
 
 const FieldTypes = {
   text: "Text",
@@ -119,11 +119,6 @@ function FormBuilder() {
   };
 
   const handleValidate = async (data: FormType) => {
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve("Code generated successfully!");
-      }, 1500);
-    });
     data.fields.forEach((field, index) => ({
       ...field,
       id: `_${index + 1}`,
