@@ -1,13 +1,9 @@
 "use client";
 
 import { useFormStore } from "@/stores/useFormStore";
-import { FieldType } from "@/types/form-types";
 import { format } from "date-fns";
-import { useRouter } from "next/navigation";
-import React from "react";
 
 const DisplayResponse = () => {
-  const router = useRouter();
   const { response, form } = useFormStore();
 
   console.log({ response, form });

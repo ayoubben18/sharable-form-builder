@@ -15,11 +15,23 @@ export const useFormStore = create<FormStore>()(
         fields: [
           {
             id: "_1",
-            name: "test",
+            name: "Full Name",
             type: "text",
             required: true,
-            description: "test",
+            description: "Enter your full name",
             format: "string",
+          },
+          {
+            id: "_2",
+            name: "What technologies are you interested in?",
+            type: "select",
+            required: true,
+            description: "Select the technologies you are interested in",
+            options: [
+              { value: "_1", name: "React" },
+              { value: "_2", name: "Vue" },
+              { value: "_3", name: "Angular" },
+            ],
           },
         ],
         formDescription: "Some random form description",

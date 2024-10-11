@@ -1,9 +1,9 @@
 "use client";
 
+import { cn } from "@/lib/utils";
+import { CloudUpload, Plus } from "lucide-react";
 import React from "react";
 import Dropzone, { DropzoneProps } from "react-dropzone";
-import { ArrowUp, CloudUpload, Plus, PlusCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 interface FileUploadCardProps extends React.HTMLAttributes<HTMLDivElement> {
   handleUploadFiles: (acceptedFiles: File[]) => void;
@@ -63,10 +63,7 @@ function FileUploadCard(props: FileUploadCardProps) {
     disabled = false,
     className,
     CustomIcon,
-    ...dropzoneProps
   } = props;
-  // const { updateIsUploading, updateAcceptedFiles, updateUploadProgress, updateUploadStatus } =
-  //   useContext<FileUploadContext>(FileUploadContext)
 
   return (
     <Dropzone
@@ -92,7 +89,6 @@ function FileUploadCard(props: FileUploadCardProps) {
           <label
             htmlFor="dropzone-file"
             className="flex h-full flex-col hover:cursor-pointer"
-            onClick={(e) => e.preventDefault()}
           >
             {/* Header */}
             {CustomIcon ? (
@@ -106,10 +102,7 @@ function FileUploadCard(props: FileUploadCardProps) {
                 <div className="flex size-12 items-center justify-center rounded-full bg-background">
                   <CloudUpload className="size-6" />
                 </div>
-                <div
-                  onClick={() => {}}
-                  className="flex size-12 items-center justify-center rounded-full bg-primary/10 p-0 transition-all hover:bg-primary/30"
-                >
+                <div className="flex size-12 items-center justify-center rounded-full bg-primary/10 p-0 transition-all hover:bg-primary/30">
                   <Plus className="size-6" />
                 </div>
               </div>

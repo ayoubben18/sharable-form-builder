@@ -271,7 +271,7 @@ function FormBuilder() {
                       {fields.map((field, index) => {
                         const Icon = getIcon(field.type);
                         return (
-                          <Fragment>
+                          <Fragment key={field.id}>
                             <SortableItem
                               key={field.id}
                               value={field.id}
